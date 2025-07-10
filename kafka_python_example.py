@@ -4,10 +4,10 @@ from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 import ssl
 from kafka.sasl.oauth import AbstractTokenProvider
 
-BOOTSTRAP_SERVERS="b-1.lrlrsitmsk.3zftdy.c2.kafka.us-east-2.amazonaws.com:9098"
-TOPIC="assay-portal-data-change"
-REGION="us-east-2"
-ARN_ROLE="arn:aws:iam::014508419436:role/AssayPortal-MSK"
+BOOTSTRAP_SERVERS="<server::localhost>:<port::9098>"
+TOPIC="<topic-name::test-topic>"
+REGION="<region::us-east-2>"
+ARN_ROLE="arn:aws:iam::<account::xxxxxxxx>:role/<role-name::Test-MSK>"
 
 class MSKTokenProvider(AbstractTokenProvider):
     def token(self):
