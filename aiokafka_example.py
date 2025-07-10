@@ -6,11 +6,10 @@ from aiokafka.abc import AbstractTokenProvider
 import socket
 import json
 
-BOOTSTRAP_SERVERS="b-1.lrlrsitmsk.3zftdy.c2.kafka.us-east-2.amazonaws.com:9098"
-# BOOTSTRAP_SERVERS="localhost:9092"
-TOPIC="assay-portal-data-change"
-REGION="us-east-2"
-ARN_ROLE="arn:aws:iam::014508419436:role/AssayPortal-MSK"
+BOOTSTRAP_SERVERS="<server::localhost>:<port::9098>"
+TOPIC="<topic-name::test-topic>"
+REGION="<region::us-east-2>"
+ARN_ROLE="arn:aws:iam::<account::xxxxxxxx>:role/<role-name::Test-MSK>"
 
 def setup_ssl_context():
     """Set up SSL context for Kafka connection."""
