@@ -3,10 +3,10 @@ from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 import threading
 import socket
 import ssl
-BOOTSTRAP_SERVERS="b-1.lrlrsitmsk.3zftdy.c2.kafka.us-east-2.amazonaws.com:9098"
-TOPIC="assay-portal-data-change"
-REGION="us-east-2"
-ARN_ROLE="arn:aws:iam::014508419436:role/AssayPortal-MSK"
+BOOTSTRAP_SERVERS="<server::localhost>:<port::9098>"
+TOPIC="<topic-name::test-topic>"
+REGION="<region::us-east-2>"
+ARN_ROLE="arn:aws:iam::<account::xxxxxxxx>:role/<role-name::Test-MSK>"
 
 def oauth_cb(oauth_config):
     auth_token, expiry_ms = MSKAuthTokenProvider.generate_auth_token_from_role_arn(REGION, ARN_ROLE)
